@@ -3,6 +3,12 @@
 
 > 从maptalks中抽离的单独使用的web worker pool模块。 [maptalks worker pool源码](https://github.com/maptalks/maptalks.js/tree/master/src/core/worker)
 
+
+### 安装
+```
+pnpm add mtk-worker-pool
+```
+
 ### 使用示例
 
 ```ts

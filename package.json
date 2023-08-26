@@ -23,6 +23,15 @@
     "test": "vite",
     "dev": "vite"
   },
+  "license": "MIT",
+  "author": {
+    "name": "pluto369",
+    "email": "1811783973@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:aliothor/mtk-worker-pool.git"
+  },
   "devDependencies": {
     "@types/node": "^20.5.6",
     "typescript": "^5.2.2",
