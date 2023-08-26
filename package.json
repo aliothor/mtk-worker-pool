@@ -1,0 +1,31 @@
+{
+  "name": "mtk-worker-pool",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.umd.cjs",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "description": "从maptalks中提取web worker线程池实现代码",
+  "keywords": [
+    "web worker",
+    "worker pool",
+    "maptalks"
+  ],
+  "scripts": {
+    "build": "vite build -c vite.build.config.ts && tsc",
+    "test": "vite",
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.6",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9"
+  }
+}
