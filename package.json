@@ -1,6 +1,6 @@
 {
   "name": "mtk-worker-pool",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "从maptalks中提取web worker线程池实现代码",
   "keywords": [
     "web worker",
