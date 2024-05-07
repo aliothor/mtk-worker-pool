@@ -91,7 +91,7 @@ actor.send({ url }, [], (error: any, message: IWorkerPostResponseMsg) => {
 
 ```
 
-### RoadMap
+### Todo
 
 - 重构代码使其支持**动态注入web worker**功能
 - 完善类型提示和使用文档
