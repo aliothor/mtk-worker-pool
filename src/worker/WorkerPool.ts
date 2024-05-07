@@ -52,7 +52,7 @@ export default class WorkerPool {
 
   constructor() {
     this.active = {}
-    this.workerCount = typeof window !== 'undefined' ? window.MAPTALKS_WORKER_COUNT || workerCount : 0
+    this.workerCount = typeof window !== 'undefined' ? globalThis.MAPTALKS_WORKER_COUNT || workerCount : 0
     this._messages = []
     this._messageBuffers = []
     this.workers = []
@@ -64,6 +64,7 @@ export default class WorkerPool {
       const url = getWorkerSourcePath() as string
       for (let i = 0; i < this.workerCount; i++) {
         const worker = new Worker(url)
+        // @ts-expect-error
         worker.id = i
         this.workers.push(worker)
       }

@@ -1,4 +1,4 @@
-import { getWorkerPool, pushAdapterCreated } from './CoreWorkers.js'
+import { getWorkerPool, pushAdapterCreated } from './CoreWorkers'
 
 let adapters: {
   [key: string]: string | Function

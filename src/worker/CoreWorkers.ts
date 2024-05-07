@@ -1,7 +1,5 @@
 import WorkerPool from './WorkerPool'
 
-export const imageFetchWorkerKey = 'core-fetch-image'
-
 let globalWorkerPool: WorkerPool
 export function setWorkerPool(pool: WorkerPool) {
   globalWorkerPool = pool

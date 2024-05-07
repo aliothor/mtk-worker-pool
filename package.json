@@ -1,40 +1,52 @@
 {
   "name": "mtk-worker-pool",
   "version": "0.0.1",
-  "type": "module",
-  "main": "dist/index.umd.cjs",
-  "module": "dist/index.js",
-  "types": "dist/types/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.umd.cjs",
-      "types": "./dist/types/index.d.ts"
-    }
-  },
   "description": "从maptalks中提取web worker线程池实现代码",
   "keywords": [
     "web worker",
     "worker pool",
     "maptalks"
   ],
-  "scripts": {
-    "build": "vite build -c vite.build.config.ts && tsc",
-    "test": "vite",
-    "dev": "vite"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "pluto369",
-    "email": "1811783973@qq.com"
-  },
+  "homepage": "https://github.com/aliothor/mtk-worker-pool",
   "repository": {
     "type": "git",
     "url": "git@github.com:aliothor/mtk-worker-pool.git"
   },
+  "license": "MIT",
+  "author": {
+    "name": "aliothor",
+    "email": "1811783973@qq.com"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "vitest run",
+    "prepack": "pnpm build",
+    "release": "changelogen --release --patch && pnpm publish && git push --follow-tags",
+    "test": "pnpm test:types && vitest run",
+    "test:types": "tsc --noEmit --skipLibCheck"
+  },
   "devDependencies": {
-    "@types/node": "^20.5.6",
-    "typescript": "^5.2.2",
-    "vite": "^4.4.9"
+    "@types/node": "^20.12.10",
+    "@vitest/browser": "^1.6.0",
+    "changelogen": "^0.5.5",
+    "playwright": "^1.44.0",
+    "typescript": "^5.4.5",
+    "unbuild": "^2.0.0",
+    "vitest": "^1.6.0"
   }
 }

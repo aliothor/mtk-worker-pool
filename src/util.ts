@@ -20,6 +20,7 @@ export function isFunction(obj: any) {
 }
 
 let uid = 0
+
 export function UID() {
   return uid++
 }
